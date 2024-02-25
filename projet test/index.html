@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation Bar</title>
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styles for the navigation bar */
+    .navbar {
+      top :0;
+      position: fixed;
+      z-index: 1000;
+      width: 100%;
+    }
+    .navbar-custom {
+      background-color: #517892;
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    .navbar-custom .navbar-nav .nav-link:hover {
+      color: #edca06;
+    }
+
+    .navbar-nav {
+      width: 100%;
+      text-align: center !important;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar-nav .nav-item {
+      display: inline-block !important;
+      margin-right: 5%;
+    }
+
+    .navbar-toggler .fa-bars {
+      color: #fff;
+    }
+
+    .mylogo {
+      width: 140px;
+      height: 40px;
+    }
+
+
+    h1 {
+      font-size: 4vw;
+      color: #fff;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h5 {
+      color: #fff;
+      font-size: 2vw;
+      text-align: center;
+      margin-bottom: 4%;
+    }
+
+
+
+    /* Custom styles for the hero section */
+    .carousel-item {
+      height: 80vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+    }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 30vh;
+
+    }
+
+    .text {
+      font-size: large;
+      font-weight: 600;
+
+    }
+
+    .overlay h1 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .overlay a {
+      color: white;
+    }
+    .overlay a:hover{
+      text-decoration: none;
+    }
+
+    .section-header {
+      color: #517892;
+      text-align: center;
+      margin-top: 4%;
+      margin-bottom: 1%;
+      font-size: 3vw;
+    }
+    .section-subheader {
+      color: #edca06;
+      text-align: center;
+      margin-top: 1%;
+      margin-bottom: 4%;
+      font-size: 2vw;
+    }
+    /*Custum style for categories*/
+
+    .card {
+      border: none;
+    }
+    
+
+    .hero {
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+    .btn:hover {
+        background-color: #3c586b;
+        border: 2px solid #3c586b;
+        color: white;
+
+      }
+
+   .discount {
+    color: #edca06;
+    width: 10px;
+    height: 10px;
+    background-color: #fbeea4;
+   }
+
+
+    /* costum style for responsivity */
+
+    /* style for desktop*/
+    @media (min-width: 768px) {
+      .hero-mobile {
+        display: none;
+      }
+      .hero-desktop{
+        margin-top: 65px;
+
+      }
+      
+
+      .login-link {
+        text-decoration: none;
+        color: #fff;
+        background-color: transparent;
+        border: 1px solid #fff;
+        padding: 5px 15px;
+        border-radius: 20px;
+        margin-right: 3%;
+
+      }
+
+      .login-link:hover {
+        color: #edca06;
+        text-decoration: none;
+        border: 1px solid #edca06;
+
+      }
+      .text1 {
+      font-size: large;
+      font-weight: 600;
+      margin-left: 3%;
+      margin-top: 3%;
+    }
+
+
+      .btn {
+        padding: 15px 20px;
+        margin: 10px;
+        color: #fff;
+        background-color: #517892;
+        border: 2px solid #517892;
+
+        border-radius: 15px;
+        text-decoration: none;
+      }
+
+      .btn2 {
+        border-radius: 15px;
+        padding: 15px 20px;
+        margin: 10px;
+        background-color: transparent;
+        border: 2px solid #edca06;
+        color: #edca06;
+      }
+      .btn2:hover {
+        background-color: #f0f0f0;
+        border: 2px solid white;
+        color: #edca06;
+      }
+      .card-img {
+      width: 100%;
+      border-radius: 10%;
+      height: 50vh;
+      
+    }
+    .card-title {
+      text-align: center;
+      font-size: 2vw;
+      color:black;
+
+    }
+    .categ-cmd {
+      margin-left: 0;
+      width: 100%;
+      font-size: large;
+    }
+
+    .img-fluid {
+      width: 70%;
+      height: 52vh;
+      box-shadow: 2px 2px 4px rgba(245, 221, 99, 0.86), -2px -2px 4px rgba(255, 251, 228, 0.983);
+      margin-bottom: 30%;
+      border-radius: 20px;
+      margin-left: 30%;
+    }
+    .btn-tday {
+    margin-left: 0 !important;
+  }
+
+
+    }
+
+    /* For smaller screens */
+    @media (max-width: 767px) {
+      .hero-desktop {
+        display: none;
+
+      }
+      
+      .hero-mobile {
+        margin-top: 65px;
+      width: 100%;
+      background-image: url('./media/bg22.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
+      .login-link {
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        margin-left: 38%;
+      }
+
+      .login-link:hover {
+        color: #edca06;
+        text-decoration: none;
+      }
+      .text1 {
+      font-size: xx-small;
+      font-weight: 200;
+      margin-left: 1%;                          
+      margin-top: 1%;
+    }
+
+
+      .hero-header-mobile {
+        width: 70%;
+        text-align: center;
+      }
+
+      .btn {
+        padding: 10px 15px;
+        margin: 10px;
+        color: #fff;
+        background-color: #517892;
+        border: 2px solid #517892;
+        border-radius: 10px;
+        text-decoration: none;
+      }
+
+      .btn2 {
+        border-radius: 10px;
+        padding: 10px 15px;
+        margin: 10px;
+        background-color: transparent;
+        border: 2px solid #edca06;
+        color: #edca06;
+      }
+
+      .card-img {
+      width: 100%;
+      border-radius: 10%;
+      height: 20vh;
+      margin-left:  auto;
+      margin-right: auto;
+      
+    }
+    .card-title {
+      text-align: center;
+      font-size: small;
+      color: black;
+    }
+
+    .categ-cmd {
+      margin-left: 0;
+      width: 100%;
+      font-size: 30%;
+      height: 30px;
+    }
+
+    .img-fluid {
+      width: 100%;
+      box-shadow: 2px 2px 4px rgba(245, 221, 99, 0.86), -2px -2px 4px rgba(255, 251, 228, 0.983);
+      margin-bottom: 30%;
+      border-radius: 20px;
+      height: 45vh;
+    }
+    .description p {
+      font-size: 2vw;
+    }
+    .description h3 {
+      font-size: 3vw;
+    }
+    .description span {
+      font-size: 2vw;
+    }
+
+    .mobile-fish-day {
+      margin-top: -55%;
+    }
+    .btn-tday {
+    margin-left: 0 !important;
+    font-size: 2vw;
+  }
+
+  }
+  </style>
+</head>
+
+<body>
+
+  <!--NAVIGATION BAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <!--logo-->
+    <a class="navbar-brand" href="#"><img class='mylogo' src='./media/logo.png'></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-bars"></i>
+      </span>
+
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link text" href="#menu">Menu</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link text" href="#">Conditions de livraison</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text" href="#">A propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text" href="#">Contact</a>
+        </li>
+
+      </ul>
+
+    <!--Log in link-->
+      <a class=" login-link text" href="#">Connexion</a>
+
+
+    </div>
+  </nav>
+
+  <!-- HERO SECTION FOR DESKTOP-->
+
+  <div class="hero-desktop">
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouhttp://127.0.0.1:5500/index.html#carouselExampleIndicatorsselExampleIndicators"
+          data-slide-to="1"></i>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('./media/bg2.jpg')">
+          <div class="overlay">
+
+            <h1 class="hero">Amusez les saveurs oceaniques en un clique !</h1>
+            <h5>Découvrez notre sélection de poissons frais et savoureux, prêts à ravir vos papilles</h5>
+            <button class="btn text1" ><a href="#menu" >Voir Menu</a></button>
+            <button class="btn2 text1">Commander  <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('./media/fishermen-2983615_640.jpg')">
+          <div class="overlay">
+            <h1 class="hero">Amusez les saveurs oceaniques en un clique !</h1>
+            <h5>Découvrez notre sélection de poissons frais et savoureux, prêts à ravir vos papilles</h5>
+
+            <button class="btn  text1"><a href="#menu" >Voir Menu</a></button>
+            <button class="btn2 text1">Commander  <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('./media/01d01315-27a9-4458-bf8f-1d9cb67f828f[100].jpg')">
+          <div class="overlay">
+            <h1 class="hero ">Amusez les saveurs oceaniques en un clique !</h1>
+            <h5>Découvrez notre sélection de poissons frais et savoureux, prêts à ravir vos papilles</h5>
+
+            <button class="btn  text1"><a href="#menu" >Voir Menu</a></button>
+            <button class="btn2 text1">Commander  <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <!--MOBILE HERO SECTION-->
+
+  <div class="hero-mobile ">
+      <h1 class="hero hero-header-mobile">Amusez les saveurs oceaniques en un clique !</h1>
+      <div> <button class="btn btn-primary ">Button 1</button>
+        <button class="btn2">Button 2</button>
+      </div>
+  </div>
+
+  <!-- BEST SELLERS SECTION -->
+
+  <div class="container">
+    <h2 class="section-header">Nos Meilleures ventes poissons</h2>
+    <h6 class="section-subheader">explaurez les favoris produits de nos clients</h6>
+    <div class="row">
+
+      <!--FIRST CARD-->
+
+      <div class="col-4">
+        <div class="card border-0">
+          <img src="./media/3276556203975-photosite-20161222-162047-0.jpg" class="card-img-top rounded-circle" alt="Fish 1">
+          <div class="card-body text-center">
+            <h4 class="card-title">Crevette</h4>
+            <p class="card-text">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="far fa-star text-warning"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+
+       <!--SECOND CARD-->
+
+      <div class="col-4">
+        <div class="card border-0">
+          <img src="./media/Screenshot 2024-02-22 145056.png" class="card-img-top rounded-circle" alt="Fish 2">
+          <div class="card-body text-center">
+            <h4 class="card-title">Calamar</h4>
+            <p class="card-text">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="far fa-star text-warning"></i>
+              <i class="far fa-star text-warning"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+       <!--THIRD CARD-->
+
+      <div class="col-4">
+        <div class="card border-0">
+          <img src="./media/360_F_32936018_3oV5VKKrlZYTUCxOLt8mbxWvTuIPCSj5.webp" class="card-img-top rounded-circle"
+            alt="Fish 3">
+          <div class="card-body text-center">
+            <h4 class="card-title">Sardine</h4>
+            <p class="card-text">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--CATEGORIES-->
+
+  <section class="container " id="menu">
+    <h2 class="section-header" >Categories</h2>
+    <h6 class="section-subheader">decouvrez la collection variée de nos poissons</h6>
+
+    <div id="categoryCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- First Carousel Item -->
+
+        <div class="carousel-item active">
+          <div class="row">
+            <!-- First Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/calamar.jpg" class="card-img-top" alt="Calamar">
+                <div class="card-body">
+                  <h4 class="card-title">Calamar</h4>
+                  <a href="#" class="btn text1 categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+            <!-- Second Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/crevette.jpg" class="card-img-top" alt="Crevette">
+                <div class="card-body">
+                  <h4 class="card-title">Crevette</h4>
+                  <a href="#" class="btn text1 categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+            <!-- Third Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/merlan.jpg" class="card-img-top" alt="Merlan">
+                <div class="card-body">
+                  <h4 class="card-title">Merlan</h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Carousel Item -->
+
+        <div class="carousel-item">
+          <div class="row">
+            <!-- First Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/bar.jpg" class="card-img-top" alt="Le Bar">
+                <div class="card-body">
+                  <h4 class="card-title">Le Bar</h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+            <!-- Second Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/sar.webp" class="card-img-top" alt="Le Sar">
+                <div class="card-body">
+                  <h4 class="card-title">Le Sar</h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+            <!-- Third Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/sardine.jpg" class="card-img-top" alt="Sardine">
+                <div class="card-body">
+                  <h4 class="card-title">Sardine</h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third carousel of items -->
+
+        <div class="carousel-item">
+          <div class="row">
+            <!-- First Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/loupmouchete.png" class="card-img-top" alt="Loup Moucheté">
+                <div class="card-body">
+                  <h4 class="card-title">Loup Moucheté </h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+            <!-- Second Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/congre.png" class="card-img-top" alt="Congre">
+                <div class="card-body">
+                  <h4 class="card-title">Congre </h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+            <!-- Third Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/raie.webp" class="card-img-top" alt="Le Raie">
+                <div class="card-body">
+                  <h4 class="card-title">Le Raie </h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth carousel of items -->
+
+        <div class="carousel-item">
+          <div class="row">
+            <!-- First Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/moules.webp" class="card-img-top" alt="Moules">
+                <div class="card-body">
+                  <h4 class="card-title">Moules</h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+            <!-- Second Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/solelangue.png" class="card-img-top" alt="Sole Langue">
+                <div class="card-body">
+                  <h4 class="card-title">Sole Langue </h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+            <!-- Third Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/soleboucle.webp" class="card-img-top" alt="Sole Bouclée">
+                <div class="card-body">
+                  <h4 class="card-title">Sole Bouclée</h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- fifth Carousel of Items -->
+
+        <div class="carousel-item">
+          <div class="row">
+            <!-- First Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/pouple.png" class="card-img-top" alt="Poulpe">
+                <div class="card-body">
+                  <h4 class="card-title">Poulpe</h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+            <!-- Second Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/pe.png" class="card-img-top" alt="Petite Seiche ">
+                <div class="card-body">
+                  <h4 class="card-title">Petite Seiche </h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+            <!-- Third Card -->
+            <div class="col-4">
+              <div class="card">
+                <img class="card-img" src="./media/pageot.png" class="card-img-top" alt="Pageot ">
+                <div class="card-body">
+                  <h4 class="card-title">Pageot </h4>
+                  <a href="#" class="btn btn-primary categ-cmd"><i class="fas fa-shopping-cart"></i> Commander</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Carousel Controls -->
+        <a class="carousel-control-prev" href="#categoryCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#categoryCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+  </section>
+
+
+  <!--FISH OF THE DAY-->
+
+<section class="container  mobile-fish-day">
+  <h2 class="section-header">Poisson du Jour !</h2>
+  <h6 class="section-subheader">decouvrez la séléction du jour avec un prix compétitif</h6>
+
+  <div class="row">
+      <!-- Fish Image -->
+      <div class="col-5 ">
+          <img src="media/besty.png" class="img-fluid" alt="Poisson du Jour">
+      </div>
+      <!-- Fish Description -->
+      <div class="col-7  description">
+          <h3>Description du Poisson du Jour</h3>
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero nec nisi scelerisque, eget aliquam metus lacinia. Proin convallis euismod ex eget viverra.
+          </p>
+          <p>
+              Nunc vitae felis aliquam, ultrices odio id, maximus elit. Ut faucibus nulla quis tellus efficitur, id dignissim mi consequat. Sed fringilla, sem ut vestibulum varius, justo sapien commodo quam, sed pharetra lacus sapien non ligula.
+          </p>
+          <div>
+            <span>75.0 MAD/KG </span>
+            <span class="discount">-50%</span></br>
+            <span><del>150 MAD/KG</del></span>
+
+          </div>
+
+
+          <!-- Button for Making a Purchase -->
+          <a href="#" class="btn btn-tday"><i class="fas fa-shopping-cart"></i> Commandez Maintemant !</a>
+      </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Font Awesome JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
